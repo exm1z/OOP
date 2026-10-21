@@ -1,0 +1,5 @@
+body { font-family: Arial, sans-serif; background: #f1f3f5; text-align: center; padding: 60px 12px; }
+main { background: white; max-width: 420px; margin: auto; padding: 25px; border-radius: 10px; }
+button { padding: 9px 16px; margin: 5px; cursor: pointer; }
+dialog { border: 1px solid #ccc; border-radius: 10px; padding: 25px; text-align: center; }
+dialog::backdrop { background: #0005; }
