@@ -1,6 +1,8 @@
-export function openFirst(next, cancel) {
+export function openFirst() {
   const dialog = document.getElementById('dialog2');
-  document.getElementById('next').onclick = next;
-  document.getElementById('cancel2').onclick = cancel;
-  dialog.showModal();
+  return new Promise(resolve => {
+    document.getElementById('next').onclick = () => resolve('next');
+    document.getElementById('cancel2').onclick = () => resolve('cancel');
+    dialog.showModal();
+  });
 }

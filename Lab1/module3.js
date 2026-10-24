@@ -1,7 +1,9 @@
-export function openSecond(back, ok, cancel) {
+export function openSecond() {
   const dialog = document.getElementById('dialog3');
-  document.getElementById('back').onclick = back;
-  document.getElementById('ok2').onclick = ok;
-  document.getElementById('cancel3').onclick = cancel;
-  dialog.showModal();
+  return new Promise(resolve => {
+    document.getElementById('back').onclick = () => resolve('back');
+    document.getElementById('ok2').onclick = () => resolve('ok');
+    document.getElementById('cancel3').onclick = () => resolve('cancel');
+    dialog.showModal();
+  });
 }

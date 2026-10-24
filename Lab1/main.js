@@ -8,16 +8,19 @@ function closeDialogs() {
 function showResult(text) {
   document.getElementById('result').textContent = 'Результат: ' + text;
 }
-function firstWindow() {
-  closeDialogs();
-  openFirst(secondWindow, closeDialogs);
-}
-function secondWindow() {
-  closeDialogs();
-  openSecond(firstWindow, () => {
-    showResult('Робота2 завершена');
+async function firstWindow() {
+  let windowNumber = 1;
+  while (true) {
     closeDialogs();
-  }, closeDialogs);
+    const action = windowNumber === 1 ? await openFirst() : await openSecond();
+    if (action === 'cancel') break;
+    if (action === 'ok') {
+      showResult('Робота 2 завершена');
+      break;
+    }
+    windowNumber = action === 'next' ? 2 : 1;
+  }
+  closeDialogs();
 }
 
 document.getElementById('work1').onclick = () => {

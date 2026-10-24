@@ -3,7 +3,7 @@ export function openSlider(showResult) {
   const slider = document.getElementById('slider');
   const number = document.getElementById('number');
 
-  slider.oninput = () => number.textContent = slider.value;
+  slider.addEventListener('input', () => number.textContent = slider.value);
   document.getElementById('saveNumber').onclick = () => {
     showResult(slider.value);
     dialog.close();
