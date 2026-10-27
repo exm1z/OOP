@@ -23,8 +23,8 @@ async function firstWindow() {
   closeDialogs();
 }
 
-document.getElementById('work1').onclick = () => {
+document.getElementById('work1').addEventListener('click', () => {
   closeDialogs();
   openSlider(showResult);
-};
-document.getElementById('work2').onclick = firstWindow;
+});
+document.getElementById('work2').addEventListener('click', firstWindow);
