@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lab2 — Крапка</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <details><summary>Файл</summary><div class="menu"><button id="clear">Очистити</button><button id="save">Зберегти PNG</button></div></details>
+    <details><summary>Об’єкти</summary><div class="menu">
+      <button data-shape="Крапка">Крапка</button>
+      <button data-shape="Лінія">Лінія</button>
+      <button data-shape="Прямокутник">Прямокутник</button>
+      <button data-shape="Еліпс">Еліпс</button>
+    </div></details>
+    <details><summary>Довідка</summary><div class="menu"><button id="about">Про програму</button></div></details>
+  </nav>
+  <p id="status">Обрано: Крапка | Об’єктів: 0/121</p>
+  <canvas id="canvas" width="900" height="520"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>

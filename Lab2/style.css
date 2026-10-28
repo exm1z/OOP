@@ -1,0 +1,11 @@
+body { font-family: Arial, sans-serif; margin: 24px; background: #f5f6fa; color: #222; }
+nav { display: flex; gap: 5px; background: #e3e6ed; padding: 5px; width: fit-content; border: 1px solid #aaa; }
+details { position: relative; }
+summary { cursor: pointer; padding: 7px 16px; list-style: none; }
+summary:hover, details[open] summary { background: #d0d8e8; }
+.menu { position: absolute; top: 32px; left: 0; z-index: 2; display: grid; min-width: 170px; background: white; border: 1px solid #aaa; box-shadow: 0 3px 8px #0002; }
+button { background: white; border: 0; padding: 10px 14px; text-align: left; cursor: pointer; }
+button:hover { background: #e5efff; }
+button.active::before { content: '✓ '; }
+canvas { display: block; background: white; border: 1px solid #555; max-width: 100%; cursor: crosshair; touch-action: none; }
+.hint { font-size: 14px; color: #555; }
