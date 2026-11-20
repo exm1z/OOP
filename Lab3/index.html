@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lab3 — Графічний редактор</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <details><summary>Файл</summary><div class="menu"><button id="clear">Очистити</button><button id="save">Зберегти PNG</button></div></details>
+    <details><summary>Об’єкти</summary><div class="menu">
+      <button data-shape="Крапка">Крапка</button>
+      <button data-shape="Лінія">Лінія</button>
+      <button data-shape="Прямокутник">Прямокутник</button>
+      <button data-shape="Еліпс">Еліпс</button>
+    </div></details>
+    <details><summary>Довідка</summary><div class="menu"><button id="about">Про програму</button></div></details>
+  </nav>
+  <div class="toolbar" aria-label="Панель інструментів">
+    <button data-shape="Крапка" title="Крапка" aria-label="Крапка"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="4" fill="currentColor"/></svg></button>
+    <button data-shape="Лінія" title="Лінія" aria-label="Лінія"><svg viewBox="0 0 32 32"><path d="M5 26 27 6"/></svg></button>
+    <button data-shape="Прямокутник" title="Прямокутник" aria-label="Прямокутник"><svg viewBox="0 0 32 32"><rect x="5" y="8" width="22" height="16"/></svg></button>
+    <button data-shape="Еліпс" title="Еліпс" aria-label="Еліпс"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="12" ry="8"/></svg></button>
+  </div>
+  <p id="status">Обрано: Крапка | Об’єктів: 0/122</p>
+  <canvas id="canvas" width="900" height="520"></canvas>
+  <script src="shape.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
